@@ -1,0 +1,92 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мої одногрупники</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: auto;
+        }
+        th, td {
+            border: 2px solid black;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+        #bio {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .animation {
+            width: 50px; 
+            height: 50px;
+        }
+    </style>
+    <script>
+        function showBio(name, birthdate, email, song) {
+            document.getElementById("bio").innerHTML = 
+                "<p><strong>П.І.Б.:</strong> " + name + "</p>" +
+                "<p><strong>Дата народження:</strong> " + birthdate + "</p>" +
+                "<p><strong>Електронна пошта:</strong> <a href='mailto:" + email + "'>" + email + "</a></p>" +
+                "<p><strong>Улюблена мелодія:</strong> " + song + "</p>";
+        }
+    </script>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th colspan="4">
+            <div class="header-container">
+                <img src="image/069b.gif" alt="Анімація" class="animation">
+                Мої одногрупники
+            </div>
+        </th>
+    </tr>
+    <tr>
+        <td><img src="image/images2.jpg" alt="Одногрупник 1" onclick="showBio('Литвиненко Ілля Олегович', '22.09.2006', 'illia.lytvynenko.24@pnu.edu.ua', 'Imagine Dragons - Believer')"></td>
+        <td><img src="image/images.jpg" alt="Одногрупник 2" onclick="showBio('Магир Марта Андріївна', '20.02.2007', 'marta.mahyr.24@pnu.edu.ua', 'Queen - Bohemian Rhapsody')"></td>
+        <td><img src="image/images1.jpg" alt="Одногрупник 3" onclick="showBio('Малісевич Віталій Віталійович', '24.03.2007', 'vitalii.malisevych.24@pnu.edu.ua', 'Coldplay - Yellow')"></td>
+        <td><img src="image/images6.jpg" alt="Одногрупник 4" onclick="showBio('Мальованчук Юліанна Тарасівна', '07.12.2006', 'yulianna.malovanchuk.24@pnu.edu.ua', 'Adele - Someone Like You')"></td>
+    </tr>
+    <tr>
+        <td colspan="4" id="bio">[Коротка біографія студента]</td>
+    </tr>
+</table>
+
+<h2 style="text-align: center;">Мультимедійні файли</h2>
+
+<div style="text-align: center;">
+    <audio controls>
+        <source src="song/1700162508_dzidzio-kadlak.mp3" type="audio/mpeg">
+        Ваш браузер не підтримує аудіоплеєр.
+    </audio>
+    <br>
+    <a href="song/1700162508_dzidzio-kadlak.mp3" download>Завантажити аудіофайл</a>
+
+    <br><br>
+
+    <video width="320" height="240" controls>
+        <source src="image/DZIDZIO - Я Міліонер_mobclip.net.mp4" type="video/mp4">
+        Ваш браузер не підтримує відеоплеєр.
+    </video>
+    <br>
+    <a href="image/DZIDZIO - Я Міліонер_mobclip.net.mp4" download>Завантажити відеофайл</a>
+
+</div>
+<a style="display: block; text-align: right" href="../index.html">На головну дисципліни</a>
+</body>
+</html>
