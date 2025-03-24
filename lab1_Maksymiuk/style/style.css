@@ -78,3 +78,24 @@ a {
     .back-link:hover {
         color: darkblue;
     }
+
+#main-title {
+    color: blue;
+    text-align: center;
+}
+
+.highlights {
+    background-color: yellow;
+}
+
+p {
+    font-size: 18px;
+}
+
+.container p {
+    color: green;
+}
+
+a:hover {
+    color: red;
+}
