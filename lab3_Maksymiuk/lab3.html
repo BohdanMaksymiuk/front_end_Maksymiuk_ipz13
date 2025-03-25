@@ -2,39 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мої одногрупники</title>
-    <style>
-        table {
-            width: 80%;
-            border-collapse: collapse;
-            margin: auto;
-        }
-        th, td {
-            border: 2px solid black;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-        }
-        img {
-            width: 100px;
-            height: 100px;
-            cursor: pointer;
-        }
-        #bio {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-        }
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        .animation {
-            width: 50px; 
-            height: 50px;
-        }
-    </style>
+     <link rel="stylesheet" href="style.css">
     <script>
         function showBio(name, birthdate, email, song) {
             document.getElementById("bio").innerHTML = 
