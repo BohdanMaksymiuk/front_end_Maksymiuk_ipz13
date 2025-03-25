@@ -1,4 +1,3 @@
-/* Основні стилі */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -18,8 +17,6 @@ body {
     padding: 20px;
     position: relative;
 }
-
-/* Стилі для header */
 header {
     background: radial-gradient(circle at center, #4CAF50 0%, #2E7D32 100%);
     color: white;
@@ -47,7 +44,6 @@ header p {
     font-size: 1.2rem;
 }
 
-/* Навігація */
 nav {
     background-color: #f8f8f8;
     padding: 1rem;
@@ -79,7 +75,6 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* Основний вміст */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -127,7 +122,6 @@ section h3 {
     text-decoration: underline overline #4CAF50;
 }
 
-/* Зображення */
 figure {
     margin: 1rem 0;
     text-align: center;
@@ -154,7 +148,6 @@ img {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Бічні елементи */
 aside {
     background: linear-gradient(to right, #f0f7f0, #e8f5e9);
     padding: 1rem;
@@ -188,7 +181,6 @@ blockquote::before, blockquote::after {
     color: #4CAF50;
 }
 
-/* Футер */
 footer {
     background: linear-gradient(to bottom, #333, #222);
     color: white;
@@ -213,7 +205,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Списки */
 ul, ol {
     padding-left: 2rem;
     border-left: 3px solid #4CAF50;
@@ -235,7 +226,6 @@ li {
     border-radius: 20px;
 }
 
-/* Рецепти */
 .recipe-details {
     max-height: 0;
     overflow: hidden;
@@ -280,7 +270,6 @@ li {
     gap: 10px;
 }
 
-/* Декоративні елементи */
 .decorative-3d {
     position: fixed;
     right: 5%;
@@ -310,7 +299,6 @@ li {
     transition: all 0.4s ease;
 }
 
-/* Інтерактивні ефекти */
 header:hover {
     transform: rotateX(8deg) translateZ(30px);
     box-shadow: 0 15px 40px rgba(0,0,0,0.25);
@@ -368,7 +356,6 @@ blockquote:hover {
     opacity: 0.7;
 }
 
-/* Адаптивність */
 @media (max-width: 768px) {
     .header-3d, .article-3d, .footer-3d, .aside-3d, .blockquote-3d {
         transform: none !important;
@@ -403,7 +390,6 @@ blockquote:hover {
     }
 }
 
-/* Додаткові стилі */
 address, time {
     display: block;
     margin: 10px 0;
