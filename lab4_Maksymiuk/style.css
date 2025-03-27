@@ -67,6 +67,7 @@
 }
 
 .clear {
+    width: 100px;
     clear: both;
     background: lightyellow;
     border: 2px solid brown;
