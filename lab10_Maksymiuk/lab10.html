@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Інтернет-магазин свіжих ягід. Найсмачніші ягоди з екологічних ферм. Доставка по всій Україні">
+    <title>Інтернет-магазин свіжих ягід "Ягідка"</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark nav-berry">
+        <div class="container">
+            <a class="navbar-brand" href="#">Ягідка</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Головна</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Асортимент</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Види ягід</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Полуниця</a></li>
+                            <li><a class="dropdown-item" href="#">Малина</a></li>
+                            <li><a class="dropdown-item" href="#">Смородина</a></li>
+                            <li><a class="dropdown-item" href="#">Чорниця</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Доставка</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Контакти</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   
+<!-- Карусель -->
+<div id="berryCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="image/images.jpg" class="d-block" alt="Свіжі ягоди">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Свіжі ягоди з екоферм</h5>
+                <p>Щоденні поставки від надійних постачальників</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="image/sale.jpg" class="d-block" alt="Сезонні знижки">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Сезонні знижки до 50%</h5>
+                <p>Тільки цього тижня спеціальні пропозиції</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="image/yagod.jpg" class="d-block w-100" alt="Набори ягід">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Подарункові набори</h5>
+                <p>Ідеальний подарунок для близьких</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#berryCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#berryCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-4 info-section">
+                <h2>Свіжість</h2>
+                <p>Ми доставляємо ягоди прямо з поля, максимально зберігаючи їх смак і корисні властивості.</p>
+                <button class="btn btn-berry">Як ми працюємо</button>
+            </div>
+            <div class="col-md-4 info-section">
+                <h2>Якість</h2>
+                <p>Всі ягоди проходять ретельний відбір та перевірку перед відправкою.</p>
+                <button class="btn btn-berry">Наші стандарти</button>
+            </div>
+            <div class="col-md-4 info-section">
+                <h2>Доставка</h2>
+                <p>Швидка доставка по всій Україні. Гарантована свіжість продукції.</p>
+                <button class="btn btn-berry">Умови доставки</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="text-center mb-4 text-berry">Наші бестселери</h2>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card berry-card h-100">
+                    <img src="image/1.jpg" class="card-img-top" alt="Полуниця">
+                    <div class="card-body">
+                        <h5 class="card-title">Полуниця "Королева"</h5>
+                        <p class="card-text">Солодка та ароматна, 1 кг</p>
+                        <p class="price">149 грн</p>
+                        <button class="btn btn-outline-berry">В кошик</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card berry-card h-100">
+                    <img src="image/2.jpg" class="card-img-top" alt="Малина">
+                    <div class="card-body">
+                        <h5 class="card-title">Малина "Лісова"</h5>
+                        <p class="card-text">Насичений смак, 500 г</p>
+                        <p class="price">199 грн</p>
+                        <button class="btn btn-outline-berry">В кошик</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card berry-card h-100">
+                    <img src="image/3.jpg" class="card-img-top" alt="Чорниця">
+                    <div class="card-body">
+                        <h5 class="card-title">Чорниця дикоросла</h5>
+                        <p class="card-text">Багата на вітаміни, 300 г</p>
+                        <p class="price">249 грн</p>
+                        <button class="btn btn-outline-berry">В кошик</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card berry-card h-100">
+                    <img src="image/4.jpg" class="card-img-top" alt="Смородина">
+                    <div class="card-body">
+                        <h5 class="card-title">Чорна смородина</h5>
+                        <p class="card-text">Високий вміст вітаміну С, 1 кг</p>
+                        <p class="price">129 грн</p>
+                        <button class="btn btn-outline-berry">В кошик</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-4 subscribe-form">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="text-berry">Отримуйте акції та новини</h2>
+                <p>Підпишіться на нашу розсилку та отримуйте інформацію про знижки та нові надходження першими!</p>
+            </div>
+            <div class="col-md-6">
+                <form class="row g-2">
+                    <div class="col-8">
+                        <input type="email" class="form-control" placeholder="Ваша електронна пошта">
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-berry w-100">Підписатися</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-berry">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Ягідка</h5>
+                    <p>Інтернет-магазин свіжих ягід з доставкою по Україні.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Контакти</h5>
+                    <ul>
+                        <li>+380 96 97 83758</li>
+                        <li>bohdan.maksymiuk.24@pnu.edu.ua</li>
+                        <li>м. Івано-Франківськ, вул. Ягідна 10</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Графік роботи</h5>
+                    <ul>
+                        <li>Пн-Пт: 9:00 - 18:00</li>
+                        <li>Сб: 10:00 - 16:00</li>
+                        <li>Нд: вихідний</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Ягідка. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
