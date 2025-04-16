@@ -60,7 +60,6 @@ body {
     text-align: left;
   }
   
-  /* 📱 Адаптація для мобільного */
   @media (max-width: 600px) {
     .grid-container {
       width: 100%;
@@ -93,7 +92,6 @@ body {
     }
   }
   
-  /* 🖨️ Стилі для друку */
   @media print {
     body {
       background: white;

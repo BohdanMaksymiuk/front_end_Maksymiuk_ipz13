@@ -1,0 +1,155 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap');
+
+@font-face {
+  font-family: 'Edu Australia VIC NT Hand Arrows';
+  src: url('fonts/EduAUVICWANTArrows-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'Bungee Spice', sans-serif;
+    background: #f0f0f0;
+  }
+  h1, h2, .title {
+    font-family: 'Edu Australia VIC NT Hand Arrows', sans-serif;
+    letter-spacing: 1px;
+  }
+  .wrapper {
+    display: flex;
+    max-width: 900px;
+    height: 90vh;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  .sidebar {
+    background: gold;
+    color: black;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-weight: bold;
+  }
+  
+
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .header {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+ 
+  .content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+  }
+  
+ 
+  .footer {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+ 
+  @media (max-width: 600px) {
+    .wrapper {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .sidebar {
+      width: 100%;
+      height: 60px;
+      writing-mode: horizontal-tb;
+      text-orientation: mixed;
+    }
+  
+    .main {
+      flex-direction: column;
+    }
+  
+    .content {
+      max-height: 300px;
+    }
+  }
+  
+  @media print {
+    body {
+      background: white;
+    }
+  
+    .wrapper {
+      flex-direction: column;
+      height: auto;
+      box-shadow: none;
+    }
+  
+    .sidebar, .header, .footer {
+      background: none !important;
+      color: black !important;
+      border: 1px solid black;
+    }
+  
+    .content {
+      overflow: visible !important;
+      max-height: none;
+    }
+  }
+
+.tooltip-btn {
+    position: relative;
+    margin: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .tooltip-btn::after {
+    content: attr(data-tooltip); 
+    position: absolute;
+    top: -35px;
+    left: 0;
+    background: #222;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    white-space: nowrap;
+    display: none;
+  }
+  
+  .tooltip-btn:hover::after {
+    display: block;
+  }
+  
+
+  .calc-demo {
+    background: mediumseagreen;
+    color: white;
+    padding: 15px;
+    margin: 20px auto;
+    width: calc(100% - 100px); 
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+    
