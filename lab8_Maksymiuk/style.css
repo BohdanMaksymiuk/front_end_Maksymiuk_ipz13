@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .grid-container {
+    display: grid;
+    width: 90%;
+    max-width: 600px;
+    height: 80vh;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 60px 1fr 60px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .block {
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .block1 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .block2 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    background-color: gold;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-weight: bold;
+  }
+  
+  .block3 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .block4 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: white;
+    overflow-y: auto;
+    text-align: left;
+  }
+  
+  /* 📱 Адаптація для мобільного */
+  @media (max-width: 600px) {
+    .grid-container {
+      width: 100%;
+      height: auto;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+    }
+  
+    .block1, .block2, .block3, .block4 {
+      grid-column: 1 / 2 !important;
+      writing-mode: horizontal-tb;
+      text-orientation: mixed;
+    }
+  
+    .block1 {
+      background-color: #0056b3;
+    }
+  
+    .block2 {
+      background-color: #ffcc00;
+    }
+  
+    .block3 {
+      background-color: #0056b3;
+    }
+  
+    .block4 {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+  }
+  
+  /* 🖨️ Стилі для друку */
+  @media print {
+    body {
+      background: white;
+      display: block;
+    }
+  
+    .grid-container {
+      box-shadow: none;
+      width: 100%;
+      height: auto;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+    }
+  
+    .block {
+      border: 1px solid #000;
+      color: black !important;
+      background: none !important;
+    }
+  
+    .block4 {
+      overflow: visible !important;
+      max-height: none;
+    }
+  }
+  
