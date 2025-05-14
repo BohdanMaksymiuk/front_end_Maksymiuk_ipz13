@@ -7,101 +7,104 @@
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a2d04a2c2b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-        <a style="display: block; text-align: right" href="../../index.html">На головну дисципліни</a>
-    <header>
-        <div class="logo">
+    <a style="display: block; text-align: right" href="../../index.html">На головну дисципліни</a>
+    
+    <div class="grid-container">
+        <header class="grid-header">
+            <div class="logo">
+                <img src="image/LOGO1.png" alt="BullTech Логотип">
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="#team">Наша команда</a></li>
+                    <li><a href="#services">Послуги</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="grid-main">
+            <section class="hero">
+                <img src="image/LOGO2.png" alt="BullTech Логотип 2" class="hero-logo">
+            </section>
+            
+            <section id="about" class="grid-section">
+                <h2>Про нас</h2>
+                <p>Ми — команда інженерів, дизайнерів та ентузіастів, яка створює рішення майбутнього вже сьогодні. BullTech спеціалізується на IT-консалтингу, розробці ПЗ, ІоТ-рішеннях та кібербезпеці.</p>
+            </section>
+            
+            <section id="team" class="grid-section">
+                <h2>Наша команда</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="image/team1.jpg" alt="Марк Цукерберг">
+                        <h3>Марк Цукерберг</h3>
+                        <p>Американський програміст і підприємець, засновник компанії Meta, розробник соціальної мережі Facebook.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="image/team2.jpg" alt="Лінус Торвальдс">
+                        <h3>Лінус Торвальдс</h3>
+                        <p>Фінсько-американський програміст, започаткував розробку ядра Linux, є її головним архітектором, а також автор найвідомішої розподіленої системи керування версіями файлів Git.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="image/team3.webp" alt="Білл Гейтс">
+                        <h3>Білл Гейтс</h3>
+                        <p>Американський бізнесмен, інвестор, письменник, філантроп, засновник корпорації Майкрософт</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="grid-section">
+                <h2>Наші послуги</h2>
+                <div class="services-grid">
+                    <div class="service-card" onclick="toggleDescription(this)">
+                        <i class="fas fa-code"></i>
+                        <h3>Розробка ПЗ</h3>
+                        <p class="service-description">Ми створюємо гнучкі, масштабовані рішення для будь-якого бізнесу — від вебдодатків до складних систем.</p>
+                    </div>
+                    <div class="service-card" onclick="toggleDescription(this)">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Дизайн та UX/UI</h3>
+                        <p class="service-description">Продуманий інтерфейс — ключ до успіху продукту. Наші UX/UI-фахівці створюють дизайн, який продає.</p>
+                    </div>
+                    <div class="service-card" onclick="toggleDescription(this)">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Кібербезпека</h3>
+                        <p class="service-description">Захистіть свої дані, інфраструктуру та імідж. Ми надаємо повний спектр кіберпослуг.</p>
+                    </div>
+                    <div class="service-card" onclick="toggleDescription(this)">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Інтернет речей (IoT)</h3>
+                        <p class="service-description">Інтеграція розумних пристроїв і автоматизація процесів для бізнесу нового покоління.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="grid-section">
+                <div class="contact-overlay">
+                    <h2>Контакти</h2>
+                    <p>Email: bohdan.maksymiuk.24@pnu.edu.ua</p>
+                    <p>Телефон: +380 96 97 83 758</p>
+                    <p>Адреса: вулиця Шевченка, 57, Івано-Франківськ, Івано-Франківська область</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="grid-footer">
             <img src="image/LOGO1.png" alt="BullTech Логотип">
-        </div>
-        <button class="menu-toggle" aria-label="Toggle menu">
-            <i class="fas fa-bars"></i>
-        </button>
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="#about">Про нас</a></li>
-                <li><a href="#team">Наша команда</a></li>
-                <li><a href="#services">Послуги</a></li>
-                <li><a href="#contact">Контакти</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <img src="image/LOGO2.png" alt="BullTech Логотип 2" class="hero-logo">
-        </section>
-        
-        <section id="about">
-            <h2 class="about">Про нас</h2>
-            <p>Ми — команда інженерів, дизайнерів та ентузіастів, яка створює рішення майбутнього вже сьогодні. BullTech спеціалізується на IT-консалтингу, розробці ПЗ, ІоТ-рішеннях та кібербезпеці.</p>
-        </section>
-        
-        <section id="team">
-            <h2 class="team">Наша команда</h2>
-            <div class="team-container">
-                <div class="team-member">
-                    <img src="image/team1.jpg" alt="Марк Цукерберг">
-                    <h3>Марк Цукерберг</h3>
-                    <p>Американський програміст і підприємець, засновник компанії Meta, розробник соціальної мережі Facebook.</p>
-                </div>
-                <div class="team-member">
-                    <img src="image/team2.jpg" alt="Лінус Торвальдс">
-                    <h3>Лінус Торвальдс</h3>
-                    <p>Фінсько-американський програміст, започаткував розробку ядра Linux, є її головним архітектором, а також автор найвідомішої розподіленої системи керування версіями файлів Git.</p>
-                </div>
-                <div class="team-member">
-                    <img src="image/team3.webp" alt="Білл Гейтс">
-                    <h3>Білл Гейтс</h3>
-                    <p>Американський бізнесмен, інвестор, письменник, філантроп, засновник корпорації Майкрософт</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="services">
-            <h2 class="services">Наші послуги</h2>
-            <div class="services-container">
-                <div class="service-card" onclick="toggleDescription(this)">
-                    <i class="fas fa-code"></i>
-                    <h3>Розробка ПЗ</h3>
-                    <p class="service-description">Ми створюємо гнучкі, масштабовані рішення для будь-якого бізнесу — від вебдодатків до складних систем.</p>
-                </div>
-                <div class="service-card" onclick="toggleDescription(this)">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>Дизайн та UX/UI</h3>
-                    <p class="service-description">Продуманий інтерфейс — ключ до успіху продукту. Наші UX/UI-фахівці створюють дизайн, який продає.</p>
-                </div>
-                <div class="service-card" onclick="toggleDescription(this)">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Кібербезпека</h3>
-                    <p class="service-description">Захистіть свої дані, інфраструктуру та імідж. Ми надаємо повний спектр кіберпослуг.</p>
-                </div>
-                <div class="service-card" onclick="toggleDescription(this)">
-                    <i class="fas fa-network-wired"></i>
-                    <h3>Інтернет речей (IoT)</h3>
-                    <p class="service-description">Інтеграція розумних пристроїв і автоматизація процесів для бізнесу нового покоління.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="contact-overlay">
-                <h2>Контакти</h2>
-                <p>Email: bohdan.maksymiuk.24@pnu.edu.ua</p>
-                <p>Телефон: +380 96 97 83 758</p>
-                <p>Адреса: вулиця Шевченка, 57, Івано-Франківськ, Івано-Франківська область</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <img src="image/LOGO1.png" alt="BullTech Логотип">
-        <p>&copy; 2025 BullTech. Всі права захищено.</p>
-    </footer>
+            <p>&copy; 2025 BullTech. Всі права захищено.</p>
+        </footer>
+    </div>
 
     <script>
     function toggleDescription(card) {

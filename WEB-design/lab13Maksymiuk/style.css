@@ -4,19 +4,49 @@ body {
     padding: 0;
     background: #f9f9f9;
     color: #333;
+    min-height: 100vh;
 }
 
 h1, h2 {
+    text-align: center;
     font-family: 'Roboto', sans-serif;
     color: #b30000;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.grid-header {
+    grid-area: header;
+}
+
+.grid-main {
+    grid-area: main;
+}
+
+.grid-footer {
+    grid-area: footer;
+}
+
+.grid-section {
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
 }
 
 header {
     background: #111;
     color: white;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    justify-content: space-between;
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
@@ -29,8 +59,10 @@ header {
 
 nav ul {
     list-style: none;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
     gap: 1.5rem;
+    justify-content: center;
 }
 
 nav a {
@@ -48,52 +80,30 @@ nav a:hover {
     text-align: center;
     background: linear-gradient(to right, #ffffff, #ffcccc);
     padding: 4rem 1rem;
+    display: grid;
+    place-items: center;
 }
 
 .hero-logo {
     max-width: 200px;
 }
 
-main {
-    padding: 2rem;
-}
-
-section {
-    margin-bottom: 4rem;
-}
-
-section img {
-    width: 100%;
-    max-width: 800px;
-    display: block;
-    margin: 1rem auto;
-    border-radius: 12px;
-}
-
-.team {
-    text-align: center;
-}
-
-.about {
-    text-align: center;
-}
-
-.team-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
 
 .team-member {
-    max-width: 250px;
-    text-align: center;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     padding: 1rem;
     transition: transform 0.3s ease;
+    display: grid;
+    justify-items: center;
+    text-align: center;
 }
 
 .team-member:hover {
@@ -108,15 +118,10 @@ section img {
     margin-bottom: 1rem;
 }
 
-.services {
-    text-align: center;
-}
-
-.services-container {
-    display: flex;
-    flex-wrap: wrap;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    justify-content: center;
     margin-top: 2rem;
 }
 
@@ -124,11 +129,12 @@ section img {
     background: #fff;
     border-radius: 12px;
     padding: 1.5rem;
-    width: 220px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     cursor: pointer;
     transition: transform 0.3s ease;
+    display: grid;
+    justify-items: center;
 }
 
 .service-card:hover {
@@ -153,15 +159,6 @@ section img {
     color: #444;
 }
 
-footer {
-    background: #000;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-    font-size: 0.95rem;
-}
-
 #contact {
     background-image: url('image/map.jpg');
     background-size: cover;
@@ -170,12 +167,13 @@ footer {
     position: relative;
     color: white;
     width: 100%;
+    display: grid;
+    place-items: center;
 }
 
 .contact-overlay {
     background: rgba(0, 0, 0, 0.6);
     max-width: 800px;
-    margin: 0 auto;
     padding: 2rem 3rem;
     border-radius: 12px;
     text-align: center;
@@ -191,6 +189,18 @@ footer {
 .contact-overlay p {
     font-size: 1.1rem;
     margin: 0.5rem 0;
+}
+
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
 }
 
 .menu-toggle {
@@ -209,25 +219,21 @@ footer {
 
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        grid-template-columns: auto 1fr auto;
         padding: 1rem;
     }
     
     .logo img {
         height: 50px;
-        margin-bottom: 1rem;
     }
     
     .menu-toggle {
         display: block;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
     }
     
     .nav-menu {
         display: none;
-        width: 100%;
+        grid-column: 1 / -1;
     }
     
     .nav-menu.active {
@@ -235,14 +241,9 @@ footer {
     }
     
     .nav-menu ul {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         padding: 1rem 0;
         gap: 0.5rem;
-        align-items: center;
-    }
-    
-    .nav-menu li {
-        margin: 0.5rem 0;
     }
     
     .hero {
@@ -253,29 +254,8 @@ footer {
         max-width: 150px;
     }
     
-    main {
-        padding: 1rem;
-    }
-    
-    .team-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .team-member {
-        max-width: 100%;
-        width: 90%;
-        margin-bottom: 1.5rem;
-    }
-    
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .service-card {
-        width: 90%;
-        margin-bottom: 1.5rem;
+    .team-grid, .services-grid {
+        grid-template-columns: 1fr;
     }
     
     #contact {
